@@ -100,3 +100,39 @@ Gaussian (Normal) Distribution
 
 ## Week 3
 
+### Transformations of Matrix
+
+- https://www.gatevidyalay.com/2d-rotation-in-computer-graphics-definition-examples/
+
+![2D Rotation in Computer Graphics | Definition | Examples | Gate Vidyalay](Linear_Algebra-assets/Rotation-Matrix-in-Computer-Graphics-1.png)
+
+### Composition / Combination of Matrix Transformations
+
+- The composition of matrix transformations corresponds to a notion of **multiplying two matrices together**.
+- Intuitively, composition means do something, **and** then do another thing to that something.
+- Formally, composition of functions is when you have two functions f and g, then  consider `g(f(x))`. We call the function `g of f` `"g composed with f"`.
+  So in this video, you apply a linear transformation, which warps the space in some way, and then apply another linear transformation to the  already warped space. The result is a composition.
+- https://www.khanacademy.org/math/linear-algebra/matrix-transformations/composition-of-transformations/v/compositions-of-linear-transformations-1
+- https://www.123calculus.com/en/matrix-transformation-page-1-35-200.html
+
+### Gaussian elimination and finding inverse of matrices
+
+- In mathematics, Gaussian elimination, also known as **row reduction**, is **an algorithm for solving systems of linear equations**. It consists of a sequence of operations performed on the corresponding matrix of coefficients.
+- https://www.youtube.com/watch?v=eDb6iugi6Uk
+
+![image-20221226132450682](Linear_Algebra-assets/image-20221226132450682.png)
+
+- elimination and back substitution
+- https://www.youtube.com/watch?v=vKBNzM3V-Rc
+- `inv(A)*A = I` where I is the identity matrix.
+
+### Determinants and Inverses
+
+- https://www.youtube.com/watch?v=3ROzG6n4yMc
+- https://youtu.be/uQhTuRlWMxw
+- https://en.wikipedia.org/wiki/QR_decomposition
+- :link: [Help with Assignments](https://github.com/launchcode01dl/mathematics-for-machine-learning-coursera)
+- https://numpy.org/
+
+## Week 4
+
