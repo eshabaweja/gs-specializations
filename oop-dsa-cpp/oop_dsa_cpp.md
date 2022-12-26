@@ -47,4 +47,38 @@
 - "version control system"
 - sites like GitHub offer hosting services for projects managed by the "git" software.
 - https://github.com/wadefagen/coursera
-- 
+- You can use any of these editors for *editing your code text*, but for actually building (compiling), you need to use the **makefiles** that we provide. These are special scripts designed to work with the terminal program "Make", which is executed in the Bash terminal simply by typing **make**.
+- https://opensource.com/article/18/8/what-how-makefile
+
+### C++ Classes (User-defined types)
+
+- classes encapsulate data and associated functionality into an object
+
+![image-20221226220033907](oop_dsa_cpp-assets/image-20221226220033907.png)
+
+- **protection levels** (public and private): decide the access that client code has to the member data or functionality
+- private data and functions are only accessible inside the class
+- **private** member variables have an **underscore** at the end of their name, like `length_`
+
+- C++ **header file** `.h` defines the interface of the class whereas `.cpp` defines implementation
+- `.h` contains **declaration** of all member variables and declaration of all member functions
+- the `.cpp` file contains all the logic to implement our class
+- `.h` files begin with `# pragma once` so that the class's definition is compiled only once
+- class declaration also ends in a semicolon, just like primitive data types
+
+![image-20221226220712771](oop_dsa_cpp-assets/image-20221226220712771.png)
+
+### STD (Standard Library) vs STL
+
+<table><thead><tr><th>STD</th><th>STL</th></tr></thead><tbody><tr><td>Std stands for standard</td><td>Stl stands for standard template library</td></tr><tr><td>Std falls under the standard C++ Library</td><td>Stl is a subset of std&nbsp;</td></tr><tr><td>All libraries fall under std.</td><td><p>There are 4 categories of stl:</p><ul><li>Algorithms</li><li>Functions.</li><li>Iterators</li><li>Containers.</li></ul></td></tr><tr><td>Space resolution operator is used(::)</td><td>No operator is used</td></tr><tr><td><p><strong>Examples:</strong>&nbsp;</p><p>cin, cout under iostream header</p></td><td><p><strong>Example:</strong></p><p>sort(),lower_bound().</p></td></tr></tbody></table>
+
+- iostream header includes operations for reading/writing to files and console `std::cout`
+- header files must be included as `#include <iostream>`
+
+![image-20221226222640496](oop_dsa_cpp-assets/image-20221226222640496.png)
+
+- A **namespace** is **a declarative region that provides a scope to the identifiers (the names of types, functions, variables, etc) inside it**. Namespaces are used to organize code into logical groups and to prevent name collisions that can occur especially when your code base includes  multiple libraries.
+
+![image-20221226223043741](oop_dsa_cpp-assets/image-20221226223043741.png)
+
+- do the above `namespace{class...}` enclosing in both `.h` and `.cpp`
