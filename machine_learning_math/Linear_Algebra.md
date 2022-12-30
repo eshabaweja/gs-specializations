@@ -136,3 +136,30 @@ Gaussian (Normal) Distribution
 
 ## Week 4
 
+### Einstein summation convention
+
+- Einstein's summation notation allows us to write this summation without the sigma notation.
+
+![image-20221229161931197](Linear_Algebra-assets/image-20221229161931197.png)
+
+![Einstein Summation Convention](Linear_Algebra-assets/eintein_summation_6.png)
+
+### Using non-square matrices to do a projection
+
+- https://www.youtube.com/watch?v=v8VSDg_WQlA
+
+### Matrices changing basis
+
+- https://www.youtube.com/watch?v=HZa1RwFHgwU
+
+- Doing a transformation in a changed basis...?
+
+### Orthogonal Matrices (orthonormal matrix)
+
+-  A square matrix with real numbers or elements is said to be an *orthogonal matrix* if its transpose is equal to its inverse matrix.
+- In linear algebra, the identity matrix of size n is the `n x n`  square matrix with ones on the main diagonal and zeros elsewhere.
+- To check if a given matrix is orthogonal, first find the transpose of that matrix. Then, multiply the given matrix with the transpose. Now, if the product is an identity matrix, the given matrix is orthogonal, otherwise, not.
+
+### The Gram–Schmidt orthonormalization process
+
+- MIT OCW: https://www.youtube.com/watch?v=TRktLuAktBQ

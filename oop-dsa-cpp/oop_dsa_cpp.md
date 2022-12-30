@@ -82,3 +82,42 @@
 ![image-20221226223043741](oop_dsa_cpp-assets/image-20221226223043741.png)
 
 - do the above `namespace{class...}` enclosing in both `.h` and `.cpp`
+- Which keyword is used to indicate which namespace(s) to search to find classes and variables when they are referenced throughout the rest of the program? `using`
+- Which C++ directive is used to insert the contents of another file at the current location while processing the current file? `#include`
+
+## Week 2
+
+### Key Concepts
+
+- Pointers and dereferencing 
+- Local (stack) memory 
+- Allocated (heap) memory
+
+### Variables and Memory Addresses in C++
+
+- has name, type, value, a location in memory
+- `int primeNum = 7;`
+- `&` operator returns the memory address in hexadecimal system
+- `$./addressOf` 
+  `Value: 7`
+  `Address: 0x7ffd0a967604`
+- stack memory grows from high to low address (i.e. it grows *towards 0*)
+
+![image-20221230105320046](oop_dsa_cpp-assets/image-20221230105320046.png)
+
+![image-20221230105450357](oop_dsa_cpp-assets/image-20221230105450357.png)
+
+- `./foo` 
+   `num in main(): 7`
+  `&num in main(): 0x7ffda969e264`
+   `x in foo(): 42`
+  `&x in foo(): 0x7ffda969e244`
+
+### Pointers
+
+- a pointer is a variable that stores the memory address of the data
+- defined by adding a `*` to the **type of** the variable
+- `int* p = &num;`
+- dereference operator: to get the data of the pointer variable's operand address
+- dereferencing of memory address is done by adding `*` to the **variable name**
+- `*p = 42;`
