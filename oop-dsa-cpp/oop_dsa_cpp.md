@@ -121,3 +121,68 @@
 - dereference operator: to get the data of the pointer variable's operand address
 - dereferencing of memory address is done by adding `*` to the **variable name**
 - `*p = 42;`
+
+### Heap Memory
+
+- memory needed to exist for longer than the lifecycle of the function
+- `new` operator is the onlyword which can allocate heap
+
+![image-20230109221253583](oop_dsa_cpp-assets/image-20230109221253583.png)
+
+- memory only re-claimed when `delete` is used
+
+![image-20230109221325828](oop_dsa_cpp-assets/image-20230109221325828.png)
+
+- heap memory starts from smaller numbers and grows upwards
+
+- so value of heap memory address is smaller than stack address
+
+### NULL pointer
+
+- segmentation fault
+
+- saves us from dangling pointers
+
+- ```c++
+  delete c;
+  c = nullptr;
+  ```
+
+- after the line "delete c;" the pointer c still stores the address of the deleted variable, which is no longer valid to dereference and is therefore dangerous.
+
+![image-20230109222641770](oop_dsa_cpp-assets/image-20230109222641770.png)
+
+- arrow operator in Classes
+
+![image-20230109223019796](oop_dsa_cpp-assets/image-20230109223019796.png)
+
+### **heap puzzles**
+
+![image-20230109224558833](oop_dsa_cpp-assets/image-20230109224558833.png)
+
+- **new** keyword tells us some of it is gonna be on the heap
+- `&y` gives us a **reference variable** (not reference pointer) which aliases a piece of memory:
+
+![image-20230109225110392](oop_dsa_cpp-assets/image-20230109225110392.png)
+
+![image-20230110143623775](oop_dsa_cpp-assets/image-20230110143623775.png)
+
+- in the above, `cout << *y << endl;` gives an error because it can not be dereferenced
+
+![image-20230110143803522](oop_dsa_cpp-assets/image-20230110143803522.png)
+
+![image-20230110144250094](oop_dsa_cpp-assets/image-20230110144250094.png)
+
+- arrays in heap memory - `new [size]; delete [];` - here the array brackets denote arrays
+
+![image-20230110153146472](oop_dsa_cpp-assets/image-20230110153146472.png)
+
+### C++ header file syntax
+
+- **.h** files are "header files". These usually have definitions of objects and declarations of global functions. Recently, some people name header files with a ".hpp" suffix instead.
+- **.cpp** files are often called the "implementation files," or simply the "source files". This is where most function definitions and main program logic go.
+
+![undefined](oop_dsa_cpp-assets/WWEDqDMkEemplgpfqc6zSA_81f646b7ba6aa3a7d1e2ae99397b5f25_compilation_chart_lo-res.png)
+
+- A more detailed primer on the casting topic: http://www.cplusplus.com/doc/tutorial/typecasting/
+- In-depth documentation: https://en.cppreference.com/w/cpp/language/implicit_conversion
