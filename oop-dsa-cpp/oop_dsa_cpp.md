@@ -186,3 +186,34 @@
 
 - A more detailed primer on the casting topic: http://www.cplusplus.com/doc/tutorial/typecasting/
 - In-depth documentation: https://en.cppreference.com/w/cpp/language/implicit_conversion
+
+## Week 3
+
+### Key Concepts
+
+- lifecycle of a C++ object
+- Constructors and destructors 
+
+- Methods and operators 
+- Access through pointers and references
+
+### Constructors are not unique
+
+![image-20230110204936108](oop_dsa_cpp-assets/image-20230110204936108.png)
+
+![image-20230110204959770](oop_dsa_cpp-assets/image-20230110204959770.png)
+
+![image-20230110205103634](oop_dsa_cpp-assets/image-20230110205103634.png)
+
+![image-20230110211432786](oop_dsa_cpp-assets/image-20230110211432786.png)
+
+### Copy constructor
+
+![image-20230110212407167](oop_dsa_cpp-assets/image-20230110212407167.png)
+
+![image-20230110212424509](oop_dsa_cpp-assets/image-20230110212424509.png)
+
+![image-20230110212523262](oop_dsa_cpp-assets/image-20230110212523262.png)
+
+![image-20230110212712409](oop_dsa_cpp-assets/image-20230110212712409.png)
+
