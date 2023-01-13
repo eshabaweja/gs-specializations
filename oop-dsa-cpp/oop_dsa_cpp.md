@@ -217,3 +217,41 @@
 
 ![image-20230110212712409](oop_dsa_cpp-assets/image-20230110212712409.png)
 
+![image-20230112194119877](oop_dsa_cpp-assets/image-20230112194119877.png)
+
+> A constructor's job is to actually create the object itself, and not just copy things between two existing objects.
+
+### Assignment Operator
+
+![image-20230112194601952](oop_dsa_cpp-assets/image-20230112194601952.png)
+
+![image-20230112194612725](oop_dsa_cpp-assets/image-20230112194612725.png)
+
+### Variable Storage
+
+![image-20230113000508317](oop_dsa_cpp-assets/image-20230113000508317.png)
+
+![image-20230113000553005](oop_dsa_cpp-assets/image-20230113000553005.png)
+
+![image-20230113002457057](oop_dsa_cpp-assets/image-20230113002457057.png)
+
+![image-20230113003144131](oop_dsa_cpp-assets/image-20230113003144131.png)
+
+![image-20230113003535394](oop_dsa_cpp-assets/image-20230113003535394.png)
+
+### Class Destructor
+
+![image-20230113003719572](oop_dsa_cpp-assets/image-20230113003719572.png)
+
+![image-20230113003727814](oop_dsa_cpp-assets/image-20230113003727814.png)
+
+- The destructors aren't called at compile time, but rather during runtime.
+
+![image-20230113004236369](oop_dsa_cpp-assets/image-20230113004236369.png)
+
+- On Linux, if you dereference an address that you shouldn't, this is often called "segmentation fault," or "segfault."
+- it's a good practice to set a pointer to nullptr if you aren't setting it to any other value immediately.
+- **for (** ***temporary variable declaration*** **:** ***container*** **) {** ***loop body*** **}**
+
+## Week 4
+
