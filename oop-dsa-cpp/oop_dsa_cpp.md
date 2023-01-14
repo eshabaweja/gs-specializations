@@ -255,3 +255,16 @@
 
 ## Week 4
 
+### Key Concepts
+
+- Object-oriented design 
+- Templates 
+- Class hierarchies and inheritance
+- tower of Hanoi
+
+### Template Types
+
+![image-20230113192510047](oop_dsa_cpp-assets/image-20230113192510047.png)
+
+![image-20230113193721682](oop_dsa_cpp-assets/image-20230113193721682.png)
+
