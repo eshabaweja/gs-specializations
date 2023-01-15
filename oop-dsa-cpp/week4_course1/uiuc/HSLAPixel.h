@@ -14,6 +14,23 @@ namespace uiuc {
 
   // Put your HSLAPixel class definition here.
   // (Remember to end it with a semicolon!)
-
+  class HSLAPixel
+  {
+  // private:
+    /* data */
+  public:
+  double h,s,l,a;
+    // HSLAPixel(/* args */);
+    // ~HSLAPixel();
+  };
+  
+  // HSLAPixel::HSLAPixel(/* args */)
+  // {
+  // }
+  
+  // HSLAPixel::~HSLAPixel()
+  // {
+  // }
+  
 
 }

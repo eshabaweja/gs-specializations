@@ -6,6 +6,8 @@
  * @author Updated by University of Illinois CS 400 Course Staff
 **/
 
+// https://stackoverflow.com/questions/71454588/minsigstksz-error-after-update-in-my-manjaro-linux
+
 #include "ImageTransform.h"
 #include "uiuc/PNG.h"
 
