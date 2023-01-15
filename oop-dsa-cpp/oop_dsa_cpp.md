@@ -268,3 +268,16 @@
 
 ![image-20230113193721682](oop_dsa_cpp-assets/image-20230113193721682.png)
 
+![image-20230114143306158](oop_dsa_cpp-assets/image-20230114143306158.png)
+
+- https://www.coursera.org/learn/cs-fundamentals-1/lecture/0Y1zE/4-4-tower-of-hanoi-solution-2
+- templated functions
+
+![image-20230114144731365](oop_dsa_cpp-assets/image-20230114144731365.png)
+
+![image-20230114144739383](oop_dsa_cpp-assets/image-20230114144739383.png)
+
+> This is because the standard library lets us compare std::string objects by alphabetical order using operators like ">". However, if we directly compare these string literals using ">" as shown by this screen, we'll end up simply comparing the addresses of two arrays of const char. That's not what we want.
+
+- inheritance
+- 
