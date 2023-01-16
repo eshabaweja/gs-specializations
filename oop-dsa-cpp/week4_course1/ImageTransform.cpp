@@ -17,8 +17,8 @@ Email:
 (...end multi-line comment.)
 ******************** */
 
-using uiuc::PNG;
 using uiuc::HSLAPixel;
+using uiuc::PNG;
 
 /**
  * Returns an image that has been transformed to grayscale.
@@ -27,12 +27,15 @@ using uiuc::HSLAPixel;
  *
  * @return The grayscale image.
  */
-PNG grayscale(PNG image) {
+PNG grayscale(PNG image)
+{
   /// This function is already written for you so you can see how to
   /// interact with our PNG class.
-  for (unsigned x = 0; x < image.width(); x++) {
-    for (unsigned y = 0; y < image.height(); y++) {
-      HSLAPixel & pixel = image.getPixel(x, y);
+  for (unsigned x = 0; x < image.width(); x++)
+  {
+    for (unsigned y = 0; y < image.height(); y++)
+    {
+      HSLAPixel &pixel = image.getPixel(x, y);
 
       // `pixel` is a reference to the memory stored inside of the PNG `image`,
       // which means you're changing the image directly. No need to `set`
@@ -43,8 +46,6 @@ PNG grayscale(PNG image) {
 
   return image;
 }
-
-
 
 /**
  * Returns an image with a spotlight centered at (`centerX`, `centerY`).
@@ -57,7 +58,7 @@ PNG grayscale(PNG image) {
  * is a total of `sqrt((3 * 3) + (4 * 4)) = sqrt(25) = 5` pixels away and
  * its luminance is decreased by 2.5% (0.975x its original value).  At a
  * distance over 160 pixels away, the luminance will always decreased by 80%.
- * 
+ *
  * The modified PNG is then returned.
  *
  * @param image A PNG object which holds the image data to be modified.
@@ -66,42 +67,93 @@ PNG grayscale(PNG image) {
  *
  * @return The image with a spotlight.
  */
-PNG createSpotlight(PNG image, int centerX, int centerY) {
+PNG createSpotlight(PNG image, int centerX, int centerY)
+{
+  for (unsigned x = 0; x < image.width(); x++)
+  {
+    for (unsigned y = 0; y < image.height(); y++)
+    {
+      HSLAPixel &pixel = image.getPixel(x, y);
+      // calculate distance of pixel from current center
+      int distance = sqrt(pow(x - centerX, 2) + pow(y - centerY, 2));
+      // spotlight when closer to center
+      if (distance <= 160)
+      {
+        pixel.l -= (0.5 * pixel.l / 100) * distance;
+      }
+      else
+      {
+        pixel.l *= 0.2;
+      }
+    }
+  }
 
   return image;
-  
 }
- 
 
 /**
  * Returns a image transformed to Illini colors.
  *
- * The hue of every pixel is set to the a hue value of either orange or
- * blue, based on if the pixel's hue value is closer to orange than blue.
+ * The hue of every pixel is set to the a hue value of either orange(11) or
+ * blue(216), based on if the pixel's hue value is closer to orange than blue.
  *
  * @param image A PNG object which holds the image data to be modified.
  *
  * @return The illinify'd image.
-**/
-PNG illinify(PNG image) {
+ **/
+PNG illinify(PNG image)
+{
+  for (unsigned x = 0; x < image.width(); x++)
+  {
+    for (unsigned y = 0; y < image.height(); y++)
+    {
+      HSLAPixel &pixel = image.getPixel(x, y);
 
+      // illinify when closer to orange
+      if (min(abs(11 - pixel.h), abs(360 - pixel.h - 11)) <= min(abs(216 - pixel.h), abs(360 - pixel.h - 216)))
+      {
+        pixel.h = 11;
+      }
+      // wrapping at some point alpha
+      else
+      {
+        pixel.h = 216;
+      }
+    }
+  }
   return image;
 }
- 
 
 /**
-* Returns an immge that has been watermarked by another image.
-*
-* The luminance of every pixel of the second image is checked, if that
-* pixel's luminance is 1 (100%), then the pixel at the same location on
-* the first image has its luminance increased by 0.2.
-*
-* @param firstImage  The first of the two PNGs, which is the base image.
-* @param secondImage The second of the two PNGs, which acts as the stencil.
-*
-* @return The watermarked image.
-*/
-PNG watermark(PNG firstImage, PNG secondImage) {
+ * Returns an immge that has been watermarked by another image.
+ *
+ * The luminance of every pixel of the second image is checked, if that
+ * pixel's luminance is 1 (100%), then the pixel at the same location on
+ * the first image has its luminance increased by 0.2.
+ *
+ * @param firstImage  The first of the two PNGs, which is the base image.
+ * @param secondImage The second of the two PNGs, which acts as the stencil.
+ *
+ * @return The watermarked image.
+ */
+PNG watermark(PNG firstImage, PNG secondImage)
+{
+  for (unsigned x = 0; x < secondImage.width(); x++)
+  {
+    for (unsigned y = 0; y < secondImage.height(); y++)
+    {
+      HSLAPixel &pixel = secondImage.getPixel(x, y);
 
+      // illinify when closer to orange
+      if (pixel.l == 1.0)
+      {
+        pixel.h = 11;
+        HSLAPixel &firstPixel = firstImage.getPixel(x, y);
+        // ternary condition
+        // only adding 0.2 or making it 1 directly
+        (firstPixel.l <= 0.8) ? firstPixel.l += 0.2 : firstPixel.l = 1;
+      }
+    }
+  }
   return firstImage;
 }
